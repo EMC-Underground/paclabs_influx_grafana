@@ -4,5 +4,6 @@ packer_cache/
 # For built boxes
 *.box
 *.tfstate
+*.tfstate.backup
 .terraform/
 .terraform*
