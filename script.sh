@@ -4,7 +4,12 @@ apt install -y \
     apt-transport-https \
     ca-certificates \
     curl \
-    software-properties-common
+    software-properties-common \
+    ntp \
+    ntpdate
+echo password | sudo service ntp stop
+echo password | sudo ntpdate -s mickey.lss.emc.com
+echo password | sudo service ntp start
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 apt-key fingerprint 0EBFCD88
 sudo add-apt-repository \
